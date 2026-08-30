@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tablero Kanban</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Pantalla de autenticación ===== -->
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <h1 class="auth-title">Tablero Kanban</h1>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tabLogin" type="button">Iniciar sesión</button>
+        <button class="auth-tab" id="tabRegister" type="button">Crear cuenta</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label for="loginUsername">Usuario</label>
+        <input type="text" id="loginUsername" required autocomplete="username" />
+
+        <label for="loginPassword">Contraseña</label>
+        <input type="password" id="loginPassword" required autocomplete="current-password" />
+
+        <p class="form-error" id="loginError"></p>
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+
+      <form id="registerForm" class="auth-form" hidden>
+        <label for="registerUsername">Usuario</label>
+        <input type="text" id="registerUsername" required autocomplete="username" />
+
+        <label for="registerEmail">Correo electrónico</label>
+        <input type="email" id="registerEmail" required autocomplete="email" />
+
+        <label for="registerPassword">Contraseña</label>
+        <input type="password" id="registerPassword" required autocomplete="new-password" />
+
+        <label for="registerPassword2">Confirmar contraseña</label>
+        <input type="password" id="registerPassword2" required autocomplete="new-password" />
+
+        <p class="form-error" id="registerError"></p>
+
+        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Aplicación (tablero) ===== -->
+  <div id="appScreen" class="app-screen" hidden>
+    <header class="app-header">
+      <button id="userBtn" class="icon-btn" type="button" title="Ver usuario">
+        <span class="icon-avatar">👤</span>
+        <span class="user-btn-label" id="userBtnLabel">Usuario</span>
+      </button>
+
+      <h1 class="app-title">Tablero Kanban</h1>
+
+      <button id="logoutBtn" class="btn btn-outline" type="button">Cerrar sesión</button>
+    </header>
+
+    <main class="board">
+      <section class="column" data-status="todo">
+        <div class="column-header column-header--todo">
+          <h2>Por hacer</h2>
+          <button class="add-btn" data-status="todo" type="button" title="Agregar tarjeta">+</button>
+        </div>
+        <div class="inline-panel" id="create-todo" hidden>
+          <textarea class="inline-textarea" placeholder="Describe la tarjeta..."></textarea>
+          <div class="inline-actions">
+            <button type="button" class="btn btn-outline btn-sm" data-action="cancel-create">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" data-action="confirm-create">Agregar</button>
+          </div>
+        </div>
+        <div class="card-list" id="list-todo" data-status="todo"></div>
+      </section>
+
+      <section class="column" data-status="in-progress">
+        <div class="column-header column-header--progress">
+          <h2>En proceso</h2>
+          <button class="add-btn" data-status="in-progress" type="button" title="Agregar tarjeta">+</button>
+        </div>
+        <div class="inline-panel" id="create-in-progress" hidden>
+          <textarea class="inline-textarea" placeholder="Describe la tarjeta..."></textarea>
+          <div class="inline-actions">
+            <button type="button" class="btn btn-outline btn-sm" data-action="cancel-create">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" data-action="confirm-create">Agregar</button>
+          </div>
+        </div>
+        <div class="card-list" id="list-in-progress" data-status="in-progress"></div>
+      </section>
+
+      <section class="column" data-status="done">
+        <div class="column-header column-header--done">
+          <h2>Terminado</h2>
+          <button class="add-btn" data-status="done" type="button" title="Agregar tarjeta">+</button>
+        </div>
+        <div class="inline-panel" id="create-done" hidden>
+          <textarea class="inline-textarea" placeholder="Describe la tarjeta..."></textarea>
+          <div class="inline-actions">
+            <button type="button" class="btn btn-outline btn-sm" data-action="cancel-create">Cancelar</button>
+            <button type="button" class="btn btn-primary btn-sm" data-action="confirm-create">Agregar</button>
+          </div>
+        </div>
+        <div class="card-list" id="list-done" data-status="done"></div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===== Modal: datos del usuario ===== -->
+  <div id="userModal" class="modal-overlay" hidden>
+    <div class="modal">
+      <h2>Usuario</h2>
+      <p><strong>Usuario:</strong> <span id="modalUsername"></span></p>
+      <p><strong>Correo:</strong> <span id="modalEmail"></span></p>
+      <div class="modal-actions">
+        <button id="closeUserModal" class="btn btn-primary" type="button">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
