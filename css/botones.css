@@ -1,0 +1,32 @@
+/* Estilos de botones, compartidos por toda la app */
+.boton {
+  border: none;
+  border-radius: var(--radius);
+  padding: 9px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-primario {
+  background: var(--blue-700);
+  color: var(--white);
+}
+.boton-primario:hover { background: var(--blue-900); }
+
+.boton-contorno {
+  background: var(--white);
+  color: var(--blue-700);
+  border: 2px solid var(--blue-700);
+}
+.boton-contorno:hover { background: var(--blue-100); }
+
+.boton-peligro {
+  background: var(--red-500);
+  color: var(--white);
+}
+.boton-peligro:hover { background: var(--red-600); }
+
+.boton-pequeno {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}

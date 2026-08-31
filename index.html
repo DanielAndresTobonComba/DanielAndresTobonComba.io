@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tablero Kanban</title>
+<!-- Hojas de estilo, una por cada módulo de la app -->
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/botones.css" />
+<link rel="stylesheet" href="css/pantallas/pantallas.css" />
+<link rel="stylesheet" href="css/autenticacion/pantalla-autenticacion.css" />
+<link rel="stylesheet" href="css/usuario/boton-usuario.css" />
+<link rel="stylesheet" href="css/usuario/modal-usuario.css" />
+<link rel="stylesheet" href="css/tablero/tablero.css" />
+<link rel="stylesheet" href="css/tarjetas/controles-en-linea.css" />
+<link rel="stylesheet" href="css/tarjetas/tarjeta.css" />
+<link rel="stylesheet" href="css/tarjetas/editar-tarjeta.css" />
+<link rel="stylesheet" href="css/tarjetas/eliminar-tarjeta.css" />
+<link rel="stylesheet" href="css/responsivo.css" />
+</head>
+<body>
+
+  <!-- Pantalla de autenticación -->
+  <div data-include="html/parciales/autenticacion/pantalla-autenticacion.html"></div>
+
+  <!-- Aplicación (tablero) -->
+  <div id="pantallaApp" class="pantalla-app" hidden>
+    <header class="encabezado-app">
+      <div data-include="html/parciales/usuario/boton-usuario.html"></div>
+
+      <h1 class="titulo-app">Tablero Kanban</h1>
+
+      <div data-include="html/parciales/cerrar-sesion/boton-cerrar-sesion.html"></div>
+    </header>
+
+    <div data-include="html/parciales/tablero/tablero.html"></div>
+  </div>
+
+  <!-- Modal: datos del usuario -->
+  <div data-include="html/parciales/usuario/modal-usuario.html"></div>
+
+  <!-- Resuelve los includes y luego carga los scripts de la app en orden -->
+  <script src="js/cargador-includes.js"></script>
+</body>
+</html>

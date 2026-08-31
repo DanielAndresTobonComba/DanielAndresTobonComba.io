@@ -1,0 +1,61 @@
+/* Modal con los datos del usuario */
+.superposicion-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 30, 66, 0.54);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(9, 30, 66, 0.4);
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: var(--blue-700);
+  font-size: 1.15rem;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 10px 0 4px;
+}
+
+.modal textarea,
+.modal select {
+  padding: 9px 10px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+}
+
+.modal textarea:focus,
+.modal select:focus {
+  border-color: var(--blue-500);
+}
+
+.acciones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}

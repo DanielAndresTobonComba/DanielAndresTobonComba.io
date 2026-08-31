@@ -1,0 +1,45 @@
+/* Controles compartidos por crear, editar y eliminar tarjeta */
+.panel-en-linea {
+  margin: 0 10px 10px;
+  background: var(--white);
+  border: 2px solid var(--blue-300);
+  border-radius: var(--radius);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.area-texto-en-linea {
+  width: 100%;
+  padding: 8px 9px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.88rem;
+  resize: vertical;
+  outline: none;
+}
+
+.area-texto-en-linea:focus {
+  border-color: var(--blue-500);
+}
+
+.select-en-linea {
+  padding: 7px 8px;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.select-en-linea:focus {
+  border-color: var(--blue-500);
+}
+
+.acciones-en-linea {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

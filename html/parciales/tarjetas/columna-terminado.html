@@ -1,0 +1,15 @@
+<!-- Columna "Terminado": botón de agregar, panel de creación y lista de tarjetas -->
+<section class="columna" data-estado="terminado">
+  <div class="encabezado-columna encabezado-columna--terminado">
+    <h2>Terminado</h2>
+    <button class="boton-agregar" data-estado="terminado" type="button" title="Agregar tarjeta">+</button>
+  </div>
+  <div class="panel-en-linea" id="crear-terminado" hidden>
+    <textarea class="area-texto-en-linea" placeholder="Describe la tarjeta..."></textarea>
+    <div class="acciones-en-linea">
+      <button type="button" class="boton boton-contorno boton-pequeno" data-accion="cancelar-crear">Cancelar</button>
+      <button type="button" class="boton boton-primario boton-pequeno" data-accion="confirmar-crear">Agregar</button>
+    </div>
+  </div>
+  <div class="lista-tarjetas" id="lista-terminado" data-estado="terminado"></div>
+</section>

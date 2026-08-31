@@ -1,0 +1,12 @@
+/* Aviso de confirmación antes de eliminar una tarjeta */
+.confirmar-eliminar-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.texto-eliminar-tarjeta {
+  font-size: 0.85rem;
+  color: var(--red-500);
+  margin: 0;
+}

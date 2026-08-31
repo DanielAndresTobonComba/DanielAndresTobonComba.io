@@ -1,0 +1,10 @@
+/* Formulario inline para editar una tarjeta */
+.tarjeta.editando {
+  cursor: default;
+}
+
+.formulario-editar-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

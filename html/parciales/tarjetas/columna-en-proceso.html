@@ -1,0 +1,15 @@
+<!-- Columna "En proceso": botón de agregar, panel de creación y lista de tarjetas -->
+<section class="columna" data-estado="en-proceso">
+  <div class="encabezado-columna encabezado-columna--en-proceso">
+    <h2>En proceso</h2>
+    <button class="boton-agregar" data-estado="en-proceso" type="button" title="Agregar tarjeta">+</button>
+  </div>
+  <div class="panel-en-linea" id="crear-en-proceso" hidden>
+    <textarea class="area-texto-en-linea" placeholder="Describe la tarjeta..."></textarea>
+    <div class="acciones-en-linea">
+      <button type="button" class="boton boton-contorno boton-pequeno" data-accion="cancelar-crear">Cancelar</button>
+      <button type="button" class="boton boton-primario boton-pequeno" data-accion="confirmar-crear">Agregar</button>
+    </div>
+  </div>
+  <div class="lista-tarjetas" id="lista-en-proceso" data-estado="en-proceso"></div>
+</section>

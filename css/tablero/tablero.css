@@ -1,0 +1,75 @@
+/* Tablero: columnas y listas de tarjetas */
+.tablero {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.columna {
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  flex: 1 1 280px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado-columna {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 3px solid transparent;
+}
+
+.encabezado-columna h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: var(--gray-700);
+}
+
+.encabezado-columna--por-hacer { border-bottom-color: var(--gray-500); }
+.encabezado-columna--en-proceso { border-bottom-color: var(--blue-500); }
+.encabezado-columna--terminado { border-bottom-color: var(--green-500); }
+
+.boton-agregar {
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  color: var(--blue-700);
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boton-agregar:hover { background: var(--blue-100); border-color: var(--blue-300); }
+
+.lista-tarjetas {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 80px;
+}
+
+/* Color de fondo mientras se arrastra una tarjeta sobre la lista */
+.lista-tarjetas.arrastrando-encima {
+  background: var(--blue-100);
+}
+
+.sin-tarjetas {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  text-align: center;
+  padding: 10px 0;
+}

@@ -1,0 +1,15 @@
+/* Botón del header para ver los datos del usuario */
+.boton-icono {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: var(--white);
+  padding: 7px 12px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+.boton-icono:hover { background: rgba(255, 255, 255, 0.22); }
+
+.icono-avatar { font-size: 1.05rem; }

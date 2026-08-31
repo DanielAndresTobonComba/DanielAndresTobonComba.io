@@ -1,0 +1,25 @@
+/* Estructura general de la pantalla principal de la app */
+.pantalla-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado-app {
+  background: var(--blue-700);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.titulo-app {
+  font-size: 1.15rem;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  min-width: 120px;
+}

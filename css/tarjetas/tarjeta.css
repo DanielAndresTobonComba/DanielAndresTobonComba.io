@@ -1,0 +1,64 @@
+/* Apariencia de una tarjeta en su estado normal */
+.tarjeta {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  cursor: grab;
+  border-left: 4px solid var(--blue-500);
+}
+
+.tarjeta[data-estado="por-hacer"] { border-left-color: var(--gray-500); }
+.tarjeta[data-estado="en-proceso"] { border-left-color: var(--blue-500); }
+.tarjeta[data-estado="terminado"] { border-left-color: var(--green-500); }
+
+/* Se aplica mientras la tarjeta se está arrastrando */
+.tarjeta.arrastrando {
+  opacity: 0.5;
+}
+
+.descripcion-tarjeta {
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  margin: 0 0 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.pie-tarjeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.insignia-estado {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: var(--white);
+}
+
+.insignia-estado.por-hacer { background: var(--gray-500); }
+.insignia-estado.en-proceso { background: var(--blue-500); }
+.insignia-estado.terminado { background: var(--green-500); }
+
+.acciones-tarjeta {
+  display: flex;
+  gap: 6px;
+}
+
+.acciones-tarjeta button {
+  border: none;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.acciones-tarjeta .boton-editar:hover { background: var(--blue-100); color: var(--blue-700); }
+.acciones-tarjeta .boton-eliminar:hover { background: #FFEBE6; color: var(--red-500); }
